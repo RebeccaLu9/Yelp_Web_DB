@@ -45,7 +45,8 @@ app.get('/categoryActiveUser', routes.categoryActiveUser)
 // Route 10 - register as GET 
 app.get('/userFriend', routes.userFriend)
 
-
+// Route 11 - register as GET ok
+app.get('/visitInfluencer', routes.visitInfluencer )
 
 app.listen(config.server_port, () => {
     console.log(`Server running at http://${config.server_host}:${config.server_port}/`);
