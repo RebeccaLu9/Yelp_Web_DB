@@ -284,6 +284,23 @@ const userFriend = (req, res) => {
     });
   };
 
+/* ---- Query 11, Find restaurant information with reviews, visited by influencers   ---- */
+const visitInfluencer = (req, res) => {
+  console.log('Restaurants visited by influencers:');
+  const query = `
+  SELECT influncer.user_id, influncer.useful, fans, reviews_legit.business_id, reviews_legit.text FROM
+(SELECT user_id, useful, fans FROM user_noFriends WHERE fans > 1500) AS influncer
+JOIN reviews_legit ON influncer.user_id = reviews_legit.user_id
+  `;
+  connection.query(query, (err, rows, fields) => {
+    if (err) console.log(err);
+    else {
+        console.log(rows);
+        res.json(rows);
+    }
+    ;
+  });
+};
 
 module.exports = {
     hello,
