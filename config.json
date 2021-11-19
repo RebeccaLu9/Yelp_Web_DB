@@ -1,0 +1,10 @@
+{
+    "rds_host": "project.cn1ge2dayrcp.us-east-1.rds.amazonaws.com",
+    "rds_port": "3306",
+    "rds_user": "admin",
+    "rds_password" : "Database550",
+    "rds_db": "Yelp",
+    "server_host": "127.0.0.1",
+    "server_port":"8080"
+
+} 
